@@ -13,15 +13,7 @@ export default async function DashboardPage() {
 
   const user = session.user;
   return (
-    <div className="flex flex-col items-center justify-center h-screen gap-4">
-      <div className="mb-4 space-x-4">
-        <Link href="/" className="text-blue-500 hover:underline">
-          Home
-        </Link>
-        <Link href="/dashboard" className="text-blue-500 hover:underline">
-          Dashboard
-        </Link>
-      </div>
+    <div className="flex flex-col items-center justify-center mt-12 gap-4">
       <h1 className="text-4xl font-bold">Dashboard Page</h1>
       <h2 className="text-2xl font-bold">Welcome {user.name}</h2>
       <p>This is You're Email: {user.email}</p>
