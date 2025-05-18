@@ -13,10 +13,8 @@ export default async function DashboardPage() {
 
   const user = session.user;
   return (
-    <div className="flex flex-col items-center justify-center mt-12 gap-4">
-      <h1 className="text-4xl font-bold">Dashboard Page</h1>
-      <h2 className="text-2xl font-bold">Welcome {user.name}</h2>
-      <p>This is You're Email: {user.email}</p>
+    <div>
+      <h1 className="text-2xl font-bold">Dashboard Page</h1>
     </div>
   );
 }
