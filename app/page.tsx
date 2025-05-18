@@ -21,9 +21,6 @@ export default function Home() {
               <Button size="lg" asChild>
                 <Link href="/dashboard">Get Started</Link>
               </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="#features">Learn More</Link>
-              </Button>
             </div>
           </div>
 

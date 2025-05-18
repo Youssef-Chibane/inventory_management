@@ -1,9 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "./ModeToggle";
-import AuthButton from "@/components/authButton";
 
 const Navbar = () => {
   return (
@@ -24,7 +22,6 @@ const Navbar = () => {
           >
             Dashboard
           </Link>
-          <AuthButton />
           <ThemeToggle />
         </div>
       </div>
@@ -43,7 +40,6 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="flex items-center gap-6">
-          <AuthButton />
           <ThemeToggle />
         </div>
       </div>
