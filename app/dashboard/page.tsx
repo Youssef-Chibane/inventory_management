@@ -1,20 +1,43 @@
-import { auth } from "@/lib/auth";
-import { headers } from "next/headers";
-import Link from "next/link";
-import { notFound, redirect } from "next/navigation";
+import { Button } from "@/components/ui/button";
+import {
+  Table,
+  TableBody,
+  TableCaption,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 
-export default async function DashboardPage() {
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
-  if (!session) {
-    return notFound();
-  }
-
-  const user = session.user;
+export default function DashboardPage() {
   return (
-    <div>
-      <h1 className="text-2xl font-bold">Dashboard Page</h1>
+    <div className="container mx-auto">
+      <section className="py-16 md:py-24">
+        <Table>
+          <TableCaption>A list of your recent invoices.</TableCaption>
+          <TableHeader>
+            <TableRow className="text-center">
+              <TableHead className="w-[100px]">ID</TableHead>
+              <TableHead>Name</TableHead>
+              <TableHead>Price</TableHead>
+              <TableHead>Amount</TableHead>
+              <TableHead className="text-right">Actions</TableHead>
+            </TableRow>
+          </TableHeader>
+          <TableBody>
+            <TableRow>
+              <TableCell className="font-medium">01</TableCell>
+              <TableCell>Laptop</TableCell>
+              <TableCell>$250.00</TableCell>
+              <TableCell>10</TableCell>
+              <TableCell className="text-right">
+                <Button>Edit</Button>
+                <Button>Delete</Button>
+              </TableCell>
+            </TableRow>
+          </TableBody>
+        </Table>
+      </section>
     </div>
   );
 }

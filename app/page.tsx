@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto">
       {/* Hero Section */}
       <section className="py-16 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
