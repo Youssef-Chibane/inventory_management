@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable}`}
       >
         <head />
-        <body>
+        <body className="max-w-6xl mx-auto px-6">
           <ThemeProvider
             attribute="class"
             defaultTheme="system"
@@ -40,7 +40,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
             <Navbar />
-            <main className="py-4">{children}</main>
+            {children}
           </ThemeProvider>
         </body>
       </html>
